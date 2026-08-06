@@ -5,9 +5,9 @@
 namespace TradingSim
 {
     OrderBook::OrderBook(
-        std::map<uint64_t, std::deque<Order>> asks,
-        std::map<uint64_t, std::deque<Order>> bids)
-        : asks(asks), bids(bids) {};
+        std::map<f64_t, std::deque<Order>> asks,
+        std::map<f64_t, std::deque<Order>> bids)
+        : asks(asks), bids(bids) {}
     
     void OrderBook::addOrder(Order& order)
     {

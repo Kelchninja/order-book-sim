@@ -58,6 +58,24 @@ build CMakeFiles/order-book-sim.dir/src/main.cpp.o: CXX_COMPILER__order-book-sim
   OBJECT_FILE_DIR = CMakeFiles/order-book-sim.dir/src
   TARGET_SUPPORT_DIR = CMakeFiles/order-book-sim.dir
 
+build CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o: CXX_COMPILER__order-book-sim_unscanned_Debug /home/peter/dev/order-book-sim/src/classes/OrderBook.cpp || cmake_object_order_depends_target_order-book-sim
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o.d
+  FLAGS = -Wall -Wextra -Wpedantic -g -std=gnu++23
+  INCLUDES = -I/home/peter/dev/order-book-sim/header
+  OBJECT_DIR = CMakeFiles/order-book-sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/order-book-sim.dir/src/classes
+  TARGET_SUPPORT_DIR = CMakeFiles/order-book-sim.dir
+
+build CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o: CXX_COMPILER__order-book-sim_unscanned_Debug /home/peter/dev/order-book-sim/src/classes/Order.cpp || cmake_object_order_depends_target_order-book-sim
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o.d
+  FLAGS = -Wall -Wextra -Wpedantic -g -std=gnu++23
+  INCLUDES = -I/home/peter/dev/order-book-sim/header
+  OBJECT_DIR = CMakeFiles/order-book-sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/order-book-sim.dir/src/classes
+  TARGET_SUPPORT_DIR = CMakeFiles/order-book-sim.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target order-book-sim
@@ -66,7 +84,7 @@ build CMakeFiles/order-book-sim.dir/src/main.cpp.o: CXX_COMPILER__order-book-sim
 #############################################
 # Link the executable order-book-sim
 
-build order-book-sim: CXX_EXECUTABLE_LINKER__order-book-sim_Debug CMakeFiles/order-book-sim.dir/src/main.cpp.o
+build order-book-sim: CXX_EXECUTABLE_LINKER__order-book-sim_Debug CMakeFiles/order-book-sim.dir/src/main.cpp.o CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o
   CONFIG = Debug
   DEP_FILE = CMakeFiles/order-book-sim.dir/link.d
   FLAGS = -Wall -Wextra -Wpedantic -g

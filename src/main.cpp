@@ -4,8 +4,8 @@
 
 int main(void)
 {
-    std::map<uint64_t, std::deque<TradingSim::Order>> bids;
-    std::map<uint64_t, std::deque<TradingSim::Order>> asks;
+    std::map<f64_t, std::deque<TradingSim::Order>> asks;
+    std::map<f64_t, std::deque<TradingSim::Order>> bids;
 
     TradingSim::OrderBook orderBook {bids, asks};
 

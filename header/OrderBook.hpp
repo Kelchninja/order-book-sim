@@ -11,13 +11,13 @@ namespace TradingSim
     class OrderBook
     {
         private:
-        std::map<uint64_t, std::deque<Order>> bids;
-        std::map<uint64_t, std::deque<Order>> asks;
+        std::map<f64_t, std::deque<Order>> asks;
+        std::map<f64_t, std::deque<Order>> bids;
 
         public:
         OrderBook(
-            std::map<uint64_t, std::deque<Order>>,
-            std::map<uint64_t, std::deque<Order>>
+            std::map<f64_t, std::deque<Order>>,
+            std::map<f64_t, std::deque<Order>>
         );
         virtual ~OrderBook() = default;
         void addOrder(Order&);
