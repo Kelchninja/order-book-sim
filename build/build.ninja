@@ -53,6 +53,7 @@ build CMakeFiles/order-book-sim.dir/src/main.cpp.o: CXX_COMPILER__order-book-sim
   CONFIG = Debug
   DEP_FILE = CMakeFiles/order-book-sim.dir/src/main.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -g -std=gnu++23
+  INCLUDES = -I/home/peter/dev/order-book-sim/header
   OBJECT_DIR = CMakeFiles/order-book-sim.dir
   OBJECT_FILE_DIR = CMakeFiles/order-book-sim.dir/src
   TARGET_SUPPORT_DIR = CMakeFiles/order-book-sim.dir
