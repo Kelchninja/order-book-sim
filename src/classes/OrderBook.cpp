@@ -11,11 +11,11 @@ namespace TradingSim
     
     void OrderBook::addOrder(Order& order)
     {
-        auto it = asks.find(order.getPrice());
-        for (auto i{0uz}; i < it->second.size(); ++i)
-        {
-            std::cout << it->second.at(i).getPrice() << std::endl;
-        }
+        auto& book = (order.getOrderType() == OrderBookTypes::TYPE_ORDER_ASK)
+            ? asks
+            : bids;
+
+        book[order.getPrice()].push_back(order);
     };
     
 }
