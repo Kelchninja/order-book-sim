@@ -1,17 +1,5 @@
 # ninja log v7
-3	759	1786055425346444278	CMakeFiles/order-book-sim.dir/src/main.cpp.o	1c7cef25c07ae640
-1438	1616	1786055426782443518	order-book-sim	948fdfb7d5c3d0e
-4	477	1786055425346444278	CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o	d13c391c1ef3ad04
-4	1438	1786055425346444278	CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o	439d743b2db02ab5
-6	1556	1786064329345577650	CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o	439d743b2db02ab5
-1556	1742	1786064330897577456	order-book-sim	948fdfb7d5c3d0e
-2	875	1786064457013569646	CMakeFiles/order-book-sim.dir/src/main.cpp.o	1c7cef25c07ae640
-876	1071	1786064457885569561	order-book-sim	948fdfb7d5c3d0e
-2	684	1786064475281567990	CMakeFiles/order-book-sim.dir/src/main.cpp.o	1c7cef25c07ae640
-684	832	1786064475965567895	order-book-sim	948fdfb7d5c3d0e
-2	693	1786064495773565831	CMakeFiles/order-book-sim.dir/src/main.cpp.o	1c7cef25c07ae640
-693	841	1786064496465565771	order-book-sim	948fdfb7d5c3d0e
-1	750	1786064518997563718	CMakeFiles/order-book-sim.dir/src/main.cpp.o	1c7cef25c07ae640
-750	916	1786064519745563654	order-book-sim	948fdfb7d5c3d0e
 1	684	1786064526913563085	CMakeFiles/order-book-sim.dir/src/main.cpp.o	1c7cef25c07ae640
 684	847	1786064527593563035	order-book-sim	948fdfb7d5c3d0e
+4	477	1786055425346444278	CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o	d13c391c1ef3ad04
+6	1556	1786064329345577650	CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o	439d743b2db02ab5

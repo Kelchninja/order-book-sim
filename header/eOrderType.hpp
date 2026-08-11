@@ -4,13 +4,13 @@
 namespace OrderBookTypes
 {
 
-    enum eOrderType
+    enum class eOrderType
     {
         TYPE_ORDER_ASK,
         TYPE_ORDER_BID
     };
 
-    enum ePaymentType
+    enum class ePaymentType
     {
         TYPE_PAYMENT_MARKET,
         TYPE_PAYMENT_LIMIT

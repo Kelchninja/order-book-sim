@@ -5,20 +5,24 @@
 
 namespace TradingSim
 {
-    class Order
+    class Order : public OrderEntity
     {
         public:
-        Order(std::string, 
+        Order(uint64_t,
+            std::string, 
             f64_t, 
             size_t, 
             OrderBookTypes::eOrderType, 
             OrderBookTypes::ePaymentType);
         virtual ~Order() = default;
-        OrderBookTypes::eOrderType getOrderType();
-        OrderBookTypes::ePaymentType getPaymentType();
-        std::string getStockName();
-        f64_t getPrice();
-        size_t getAmount();
+        OrderBookTypes::eOrderType getOrderType() const noexcept;
+        OrderBookTypes::ePaymentType getPaymentType() const noexcept;
+        std::string getStockName() const noexcept;
+        f64_t getPrice() const noexcept;
+        size_t getAmount() const noexcept;
+        
+        // operators
+        bool operator==(const Order&) const = default;
 
         private:
         std::string stockName;
@@ -28,6 +32,20 @@ namespace TradingSim
         OrderBookTypes::ePaymentType paymentType;
 
     };
+
+    class OrderEntity
+    {
+        private:
+        const uint64_t id;
+
+        public:
+        OrderEntity(uint64_t);
+        virtual ~OrderEntity() = default;
+        uint64_t getId() const noexcept;
+        static uint64_t getHash(uint64_t) noexcept;
+        uint64_t getHash() const noexcept;
+    };
+
 
 };
 
