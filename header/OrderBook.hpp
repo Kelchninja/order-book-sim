@@ -26,6 +26,7 @@ namespace TradingSim
             OrderTree,
             HandleTable
         );
+        OrderBook();
 
         virtual ~OrderBook() = default;
 

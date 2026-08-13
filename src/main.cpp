@@ -4,10 +4,8 @@
 
 int main(void)
 {
-    std::map<f64_t, std::deque<TradingSim::Order>> asks;
-    std::map<f64_t, std::deque<TradingSim::Order>> bids;
 
-    TradingSim::OrderBook orderBook {bids, asks};
+    TradingSim::OrderBook orderBook{};
 
     TradingSim::Order order1 {
         1234567890,
@@ -17,7 +15,5 @@ int main(void)
         OrderBookTypes::eOrderType::TYPE_ORDER_ASK, 
         OrderBookTypes::ePaymentType::TYPE_PAYMENT_MARKET
     };
-
-    orderBook.addOrder(order1);
 
 }

@@ -1,7 +1,5 @@
 #include "Order.hpp"
-#include "Price.hpp"
 #include "common.hpp"
-#include "eOrderType.hpp"
 
 #include <string>
 
@@ -9,6 +7,20 @@
 
 namespace TradingSim
 {
+    // IOrderEntity
+    OrderEntity::OrderEntity(uint64_t id)
+    : id(id) {};
+
+    uint64_t OrderEntity::getHash(uint64_t id) noexcept
+    {
+        return std::hash<uint64_t>{}(id);
+    }
+
+    uint64_t OrderEntity::getHash() const noexcept
+    {
+        return getHash(id);
+    }
+
     // Order
     Order::Order(uint64_t orderID,
             std::string stockName, 
@@ -60,22 +72,6 @@ namespace TradingSim
         << ", type=" << typeStr << "}";
 
         return os;
-    }
-
-
-
-    // IOrderEntity
-    OrderEntity::OrderEntity(uint64_t id)
-    : id(id) {};
-
-    uint64_t OrderEntity::getHash(uint64_t id) noexcept
-    {
-        return std::hash<uint64_t>{}(id);
-    }
-
-    uint64_t OrderEntity::getHash() const noexcept
-    {
-        return getHash(id);
     }
 
 }

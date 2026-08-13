@@ -1,9 +1,26 @@
 #pragma once
+
+#include "Price.hpp"
+#include "eOrderType.hpp"
+
 #include <ostream>
 
 
 namespace TradingSim
 {
+    class OrderEntity
+    {
+        private:
+        const uint64_t id;
+
+        public:
+        OrderEntity(uint64_t);
+        virtual ~OrderEntity() = default;
+        uint64_t getId() const noexcept;
+        static uint64_t getHash(uint64_t) noexcept;
+        uint64_t getHash() const noexcept;
+    };
+
     class Order : public OrderEntity
     {
         friend std::ostream& operator<<(std::ostream& os, const Order& order);
@@ -34,19 +51,6 @@ namespace TradingSim
         OrderBookTypes::eOrderType orderType;
         OrderBookTypes::ePaymentType paymentType;
 
-    };
-
-    class OrderEntity
-    {
-        private:
-        const uint64_t id;
-
-        public:
-        OrderEntity(uint64_t);
-        virtual ~OrderEntity() = default;
-        uint64_t getId() const noexcept;
-        static uint64_t getHash(uint64_t) noexcept;
-        uint64_t getHash() const noexcept;
     };
 
 

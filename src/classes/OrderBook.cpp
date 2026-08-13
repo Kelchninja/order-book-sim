@@ -12,6 +12,9 @@ namespace TradingSim
         OrderTree bids,
         HandleTable handles)
         : asks{asks}, bids{bids}, handles{handles} {}
+
+    OrderBook::OrderBook()
+    : asks{OrderTree{}}, bids{OrderTree{}}, handles{HandleTable{}} {}
     
     void OrderBook::addOrder(Order order)
     {
