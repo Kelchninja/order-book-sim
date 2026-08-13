@@ -11,6 +11,11 @@ namespace TradingSim
     OrderEntity::OrderEntity(uint64_t id)
     : id(id) {};
 
+    uint64_t OrderEntity::getId() const noexcept
+    {
+        return id;
+    }
+
     uint64_t OrderEntity::getHash(uint64_t id) noexcept
     {
         return std::hash<uint64_t>{}(id);

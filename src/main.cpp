@@ -9,8 +9,8 @@ int main(void)
 
     TradingSim::Order order1 {
         1234567890,
-        "some name", 
-        123.56, 
+        "some name",
+        TradingSim::Price{123.56},
         3, 
         OrderBookTypes::eOrderType::TYPE_ORDER_ASK, 
         OrderBookTypes::ePaymentType::TYPE_PAYMENT_MARKET

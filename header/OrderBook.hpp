@@ -34,7 +34,7 @@ namespace TradingSim
         void cancelOrder(Order&);
 
         std::optional<std::list<Order>::iterator> inline findMatch(const Order&);
-        void processOrder(Order) noexcept;
+        void processOrder(Order);
         void executeTrade(Order&, Order&);
     };
 
