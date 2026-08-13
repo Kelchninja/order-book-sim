@@ -53,15 +53,13 @@ namespace TradingSim
         handles.erase(handle_it);
     }
 
-    std::optional<std::list<Order>::iterator> inline OrderBook::findMatch(const Order& order)
+    std::optional<std::list<Order>::iterator> OrderBook::findMatch(const Order& order)
     {
         using OrderBookTypes::eOrderType;
 
-        // Eine eingehende Order matcht gegen die Gegenseite des Buchs.
         auto& book = (order.getOrderType() == eOrderType::TYPE_ORDER_ASK)
         ? bids : asks;
 
-        // find() statt operator[], damit kein leeres Preis-Level angelegt wird.
         auto level = book.find(order.getPrice());
         if (level == book.end() || level->second.empty())
         {
