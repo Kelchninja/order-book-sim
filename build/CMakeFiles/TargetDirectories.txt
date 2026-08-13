@@ -1,3 +1,0 @@
-/home/peter/dev/order-book-sim/build/CMakeFiles/order-book-sim.dir
-/home/peter/dev/order-book-sim/build/CMakeFiles/edit_cache.dir
-/home/peter/dev/order-book-sim/build/CMakeFiles/rebuild_cache.dir

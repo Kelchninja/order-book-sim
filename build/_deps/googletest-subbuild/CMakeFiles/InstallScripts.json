@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/peter/dev/order-book-sim/build/_deps/googletest-subbuild/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
