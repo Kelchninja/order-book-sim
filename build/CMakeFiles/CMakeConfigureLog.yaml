@@ -2562,3 +2562,161 @@ events:
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.46
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/FindGit.cmake:111 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/FetchContent.cmake:1884 (find_package)"
+      - "/usr/share/cmake-4.2/Modules/FetchContent.cmake:1619 (__FetchContent_populateSubbuild)"
+      - "/usr/share/cmake-4.2/Modules/FetchContent.cmake:2155:EVAL:2 (__FetchContent_doPopulation)"
+      - "/usr/share/cmake-4.2/Modules/FetchContent.cmake:2155 (cmake_language)"
+      - "/usr/share/cmake-4.2/Modules/FetchContent.cmake:2394 (__FetchContent_Populate)"
+      - "CMakeLists.txt:29 (FetchContent_MakeAvailable)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/home/peter/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/dotnet/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "/mnt/c/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Users/peter/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "/mnt/c/Users/peter/AppData/Local/Programs/Python/Python314/"
+      - "/mnt/c/Users/peter/AppData/Local/Programs/Python/Launcher/"
+      - "/mnt/c/Users/peter/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/peter/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/peter/.dotnet/tools/"
+      - "/mnt/c/vcpkg/"
+      - "/mnt/c/Users/peter/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "/mnt/c/Users/peter/AppData/Local/Programs/DockerDesktop/resources/bin/"
+      - "/snap/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/peter/.local/bin/git"
+      - "/usr/local/sbin/git"
+      - "/usr/local/bin/git"
+      - "/usr/sbin/git"
+    found: "/usr/bin/git"
+    search_context:
+      ENV{PATH}:
+        - "/home/peter/.local/bin"
+        - "/home/peter/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/dotnet/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Users/peter/AppData/Local/Programs/Python/Python314/Scripts/"
+        - "/mnt/c/Users/peter/AppData/Local/Programs/Python/Python314/"
+        - "/mnt/c/Users/peter/AppData/Local/Programs/Python/Launcher/"
+        - "/mnt/c/Users/peter/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/peter/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/peter/.dotnet/tools"
+        - "/mnt/c/vcpkg"
+        - "/mnt/c/Users/peter/.dotnet/tools"
+        - "/mnt/c/Users/peter/AppData/Local/JetBrains/Toolbox/scripts"
+        - "/mnt/c/Users/peter/AppData/Local/Programs/DockerDesktop/resources/bin"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "build/_deps/googletest-src/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/peter/dev/order-book-sim/build/CMakeFiles/CMakeScratch/TryCompile-1QWd94"
+      binary: "/home/peter/dev/order-book-sim/build/CMakeFiles/CMakeScratch/TryCompile-1QWd94"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/peter/dev/order-book-sim/build/CMakeFiles/CMakeScratch/TryCompile-1QWd94'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_cda7f
+        [1/2] /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_cda7f.dir/src.c.o -c /home/peter/dev/order-book-sim/build/CMakeFiles/CMakeScratch/TryCompile-1QWd94/src.c
+        [2/2] : && /usr/bin/cc   CMakeFiles/cmTC_cda7f.dir/src.c.o -o cmTC_cda7f   && :
+        
+      exitCode: 0
+...

@@ -1,0 +1,120 @@
+{
+  "tests": 18,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "PriceTest",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "DefaultIsZero",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 9
+        },
+        {
+          "name": "ConstructsFromDoubleWithScale",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 16
+        },
+        {
+          "name": "RoundsToNearestTick",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 23
+        },
+        {
+          "name": "FromTicks",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 30
+        },
+        {
+          "name": "Arithmetic",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 37
+        },
+        {
+          "name": "Comparison",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 45
+        },
+        {
+          "name": "ToString",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 53
+        },
+        {
+          "name": "HashMatchesTicksHash",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Price_test.cpp",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "name": "OrderTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "StoresAllFields",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Order_test.cpp",
+          "line": 24
+        },
+        {
+          "name": "BidMarketOrder",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Order_test.cpp",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "name": "OrderEntityTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "HashMatchesStdHash",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/Order_test.cpp",
+          "line": 46
+        }
+      ]
+    },
+    {
+      "name": "OrderBookTest",
+      "tests": 7,
+      "testsuite": [
+        {
+          "name": "FindMatchReturnsNulloptWhenEmpty",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/OrderBook_test.cpp",
+          "line": 32
+        },
+        {
+          "name": "IncomingAskMatchesRestingBidAtSamePrice",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/OrderBook_test.cpp",
+          "line": 38
+        },
+        {
+          "name": "IncomingBidMatchesRestingAsk",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/OrderBook_test.cpp",
+          "line": 48
+        },
+        {
+          "name": "NoMatchAtDifferentPrice",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/OrderBook_test.cpp",
+          "line": 58
+        },
+        {
+          "name": "SameSideIsNotMatched",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/OrderBook_test.cpp",
+          "line": 66
+        },
+        {
+          "name": "CancelRemovesRestingOrder",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/OrderBook_test.cpp",
+          "line": 74
+        },
+        {
+          "name": "CancelUnknownOrderIsNoop",
+          "file": "\/home\/peter\/dev\/order-book-sim\/tests\/OrderBook_test.cpp",
+          "line": 86
+        }
+      ]
+    }
+  ]
+}

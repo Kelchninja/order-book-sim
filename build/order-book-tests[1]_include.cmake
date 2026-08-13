@@ -1,0 +1,5 @@
+if(EXISTS "/home/peter/dev/order-book-sim/build/order-book-tests[1]_tests.cmake")
+  include("/home/peter/dev/order-book-sim/build/order-book-tests[1]_tests.cmake")
+else()
+  add_test(order-book-tests_NOT_BUILT order-book-tests_NOT_BUILT)
+endif()
