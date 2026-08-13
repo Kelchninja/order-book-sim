@@ -1,35 +1,42 @@
 #pragma once
-#include <memory>
-#include <utility>
+
 #include <map>
-#include <deque>
+#include <unordered_map>
+#include <optional>
+
+#include "Handle.hpp"
 #include "Order.hpp"
-#include <vector>
+#include "Price.hpp"
 
 namespace TradingSim
 {
+    using OrderTree = std::map<Price, std::list<Order>>;
+    using HandleTable = std::unordered_map<uint64_t, Handle>;
 
     class OrderBook
     {
         private:
-        std::map<f64_t, std::deque<Order>> asks;
-        std::map<f64_t, std::deque<Order>> bids;
-        std::vector<std::list<OrderEntity*>> pendingOrders;;
+        OrderTree asks;
+        OrderTree bids;
+        HandleTable handles;
 
         public:
         OrderBook(
-            std::map<f64_t, std::deque<Order>>,
-            std::map<f64_t, std::deque<Order>>,
-            std::vector<std::list<OrderEntity*>>
+            OrderTree,
+            OrderTree,
+            HandleTable
         );
+
         virtual ~OrderBook() = default;
+
         void addOrder(Order);
-        Order* findOrder(uint64_t);
-        std::pair<Order, Order> findPair(Order& order) noexcept;
-        void processPair(std::pair<Order&, Order&>);
-        Order& operator[](Order& other) const noexcept; // for fun access
+        void cancelOrder(Order&);
+
+        std::optional<std::list<Order>::iterator> inline findMatch(const Order&);
+        void processOrder(Order) noexcept;
+        void executeTrade(Order&, Order&);
     };
 
 
-};
+}
 

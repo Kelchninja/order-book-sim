@@ -1,30 +1,34 @@
-
-
-
 #include "Order.hpp"
+#include "Price.hpp"
+#include "common.hpp"
+#include "eOrderType.hpp"
+
+#include <string>
+
+
 
 namespace TradingSim
 {
     // Order
     Order::Order(uint64_t orderID,
             std::string stockName, 
-            f64_t price, 
+            Price price, 
             size_t amount, 
             OrderBookTypes::eOrderType orderType, 
             OrderBookTypes::ePaymentType paymentType)
-    : OrderEntity(orderID),
-    stockName(stockName), 
-    price(price), 
-    amount(amount), 
-    orderType(orderType), 
-    paymentType(paymentType) {};
+    : OrderEntity{orderID},
+    stockName{stockName}, 
+    price{price}, 
+    amount{amount}, 
+    orderType{orderType}, 
+    paymentType{paymentType} {}
 
     size_t Order::getAmount() const noexcept
     {
         return amount;
     };
 
-    f64_t Order::getPrice() const noexcept
+    Price Order::getPrice() const noexcept
     {
         return price;
     };
@@ -44,6 +48,20 @@ namespace TradingSim
         return paymentType;
     };
 
+    std::ostream& operator<<(std::ostream& os, const Order& order)
+    {
+        std::string typeStr = (order.getOrderType() == OrderBookTypes::eOrderType::TYPE_ORDER_ASK)
+            ? "ASK" : "BID";
+
+        os << "Order{id=" << order.getId()
+        << ", stock=" << order.getStockName()
+        << ", price=" << order.getPrice().toString()
+        << ", amount=" << order.getAmount()
+        << ", type=" << typeStr << "}";
+
+        return os;
+    }
+
 
 
     // IOrderEntity
@@ -60,5 +78,5 @@ namespace TradingSim
         return getHash(id);
     }
 
-};
+}
 

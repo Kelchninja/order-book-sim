@@ -1,32 +1,35 @@
 #pragma once
-#include <string>
-#include "common.hpp"
-#include "eOrderType.hpp"
+#include <ostream>
+
 
 namespace TradingSim
 {
     class Order : public OrderEntity
     {
+        friend std::ostream& operator<<(std::ostream& os, const Order& order);
+
         public:
         Order(uint64_t,
             std::string, 
-            f64_t, 
+            Price, 
             size_t, 
             OrderBookTypes::eOrderType, 
             OrderBookTypes::ePaymentType);
         virtual ~Order() = default;
+
         OrderBookTypes::eOrderType getOrderType() const noexcept;
         OrderBookTypes::ePaymentType getPaymentType() const noexcept;
         std::string getStockName() const noexcept;
-        f64_t getPrice() const noexcept;
+        Price getPrice() const noexcept;
         size_t getAmount() const noexcept;
+        
         
         // operators
         bool operator==(const Order&) const = default;
-
+        
         private:
         std::string stockName;
-        f64_t price;
+        Price price;
         size_t amount;
         OrderBookTypes::eOrderType orderType;
         OrderBookTypes::ePaymentType paymentType;

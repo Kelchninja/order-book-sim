@@ -1,19 +1,19 @@
 [
 {
   "directory": "/home/peter/dev/order-book-sim/build",
-  "command": "/usr/bin/c++ -I/home/peter/dev/order-book-sim/header  -Wall -Wextra -Wpedantic -g -std=gnu++23 -o CMakeFiles/order-book-sim.dir/src/main.cpp.o -c /home/peter/dev/order-book-sim/src/main.cpp",
+  "command": "/usr/bin/c++ -I/home/peter/dev/order-book-sim/header  -Wall -Wextra -Wpedantic -Wuse-after-move -g -std=gnu++23 -o CMakeFiles/order-book-sim.dir/src/main.cpp.o -c /home/peter/dev/order-book-sim/src/main.cpp",
   "file": "/home/peter/dev/order-book-sim/src/main.cpp",
   "output": "/home/peter/dev/order-book-sim/build/CMakeFiles/order-book-sim.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/peter/dev/order-book-sim/build",
-  "command": "/usr/bin/c++ -I/home/peter/dev/order-book-sim/header  -Wall -Wextra -Wpedantic -g -std=gnu++23 -o CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o -c /home/peter/dev/order-book-sim/src/classes/OrderBook.cpp",
+  "command": "/usr/bin/c++ -I/home/peter/dev/order-book-sim/header  -Wall -Wextra -Wpedantic -Wuse-after-move -g -std=gnu++23 -o CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o -c /home/peter/dev/order-book-sim/src/classes/OrderBook.cpp",
   "file": "/home/peter/dev/order-book-sim/src/classes/OrderBook.cpp",
   "output": "/home/peter/dev/order-book-sim/build/CMakeFiles/order-book-sim.dir/src/classes/OrderBook.cpp.o"
 },
 {
   "directory": "/home/peter/dev/order-book-sim/build",
-  "command": "/usr/bin/c++ -I/home/peter/dev/order-book-sim/header  -Wall -Wextra -Wpedantic -g -std=gnu++23 -o CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o -c /home/peter/dev/order-book-sim/src/classes/Order.cpp",
+  "command": "/usr/bin/c++ -I/home/peter/dev/order-book-sim/header  -Wall -Wextra -Wpedantic -Wuse-after-move -g -std=gnu++23 -o CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o -c /home/peter/dev/order-book-sim/src/classes/Order.cpp",
   "file": "/home/peter/dev/order-book-sim/src/classes/Order.cpp",
   "output": "/home/peter/dev/order-book-sim/build/CMakeFiles/order-book-sim.dir/src/classes/Order.cpp.o"
 }
